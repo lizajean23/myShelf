@@ -1,4 +1,4 @@
-exports.handler = async function handler(event) {
+export async function handler(event) {
   try {
     const params = { ...(event.queryStringParameters || {}) }
     const endpoint = params.endpoint || 'search'
