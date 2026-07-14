@@ -1,0 +1,62 @@
+:root,
+[data-theme='dark'] {
+  --bg: #2a1612;
+  --bg-raised: #3a211c;
+  --bg-sunken: #1f100e;
+  --wood: #7a4334;
+  --wood-deep: #4a281e;
+  --ink: #f3e2d2;
+  --ink-soft: #c9a690;
+  --accent: #d2554a;
+  --accent-deep: #a83228;
+  --accent-glow: rgba(210, 85, 74, 0.35);
+  --brass: #d4b06a;
+  --brass-deep: #a88440;
+  --velvet: #9c3338;
+  --border: #5a3a30;
+  --card: rgba(58, 33, 28, 0.94);
+  --overlay: rgba(20, 8, 6, 0.72);
+  --nav-bg: rgba(42, 22, 18, 0.94);
+  --hero-glow:
+    radial-gradient(ellipse at 18% -20%, rgba(210, 85, 74, 0.32), transparent 48%),
+    radial-gradient(ellipse at 85% 0%, rgba(212, 176, 106, 0.14), transparent 38%),
+    linear-gradient(180deg, #3a211c 0%, #2a1612 55%, #241410 100%);
+  --shelf-wood: linear-gradient(180deg, #6b3e30 0%, #3f241c 55%, #2a1812 100%);
+  --vinyl-shine: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    transparent 42%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+[data-theme='light'] {
+  --bg: #f3e6d6;
+  --bg-raised: #faf1e6;
+  --bg-sunken: #e6d2bc;
+  --wood: #8b5340;
+  --wood-deep: #5c3224;
+  --ink: #2a1410;
+  --ink-soft: #6e4638;
+  --accent: #a31f1f;
+  --accent-deep: #6f1212;
+  --accent-glow: rgba(163, 31, 31, 0.22);
+  --brass: #a8823a;
+  --brass-deep: #7a5c28;
+  --velvet: #8a2428;
+  --border: #d4b89c;
+  --card: rgba(250, 241, 230, 0.94);
+  --overlay: rgba(28, 12, 8, 0.55);
+  --nav-bg: rgba(243, 230, 214, 0.92);
+  --hero-glow:
+    radial-gradient(ellipse at 15% -10%, rgba(163, 31, 31, 0.16), transparent 50%),
+    radial-gradient(ellipse at 90% 5%, rgba(168, 130, 58, 0.14), transparent 40%),
+    linear-gradient(180deg, #f8eddf 0%, #ecd9c4 55%, #e2cbb3 100%);
+  --shelf-wood: linear-gradient(180deg, #9a6048 0%, #6b3e2c 55%, #4a2a1c 100%);
+  --vinyl-shine: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    transparent 40%,
+    rgba(0, 0, 0, 0.28)
+  );
+}

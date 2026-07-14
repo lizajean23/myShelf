@@ -1,0 +1,41 @@
+$font-display: 'Libre Baskerville', 'Georgia', serif;
+$font-body: 'Source Serif 4', 'Georgia', serif;
+$font-ui: 'DM Sans', 'Helvetica Neue', sans-serif;
+
+$radius-sm: 3px;
+$radius-md: 8px;
+$radius-lg: 16px;
+
+$shadow-soft: 0 14px 36px rgba(40, 12, 8, 0.18);
+$shadow-deep: 0 24px 60px rgba(20, 6, 4, 0.42);
+
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+@mixin respond-up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin page-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+@mixin jazz-texture {
+  position: relative;
+
+  &::after {
+    content: '';
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    opacity: 0.045;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}

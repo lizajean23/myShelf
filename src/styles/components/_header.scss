@@ -1,0 +1,133 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(14px);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  width: min(1120px, calc(100% - 1.5rem));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.25rem;
+  padding: 0.55rem 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: max-content;
+
+  &__name {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.55rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    color: var(--accent-deep);
+  }
+
+  [data-theme='dark'] &__name {
+    color: var(--brass);
+  }
+
+  &__tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+}
+
+.nav {
+  display: none;
+  gap: 0.35rem;
+
+  @media (min-width: 860px) {
+    display: flex;
+  }
+
+  a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &.active {
+      color: var(--ink);
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+    }
+
+    &.active {
+      color: var(--accent);
+    }
+  }
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  display: grid;
+  place-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--brass);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+}
+
+.menu-toggle {
+  @media (min-width: 860px) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem 1rem;
+  border-top: 1px solid var(--border);
+
+  @media (min-width: 860px) {
+    display: none;
+  }
+
+  a {
+    font-family: 'DM Sans', sans-serif;
+    padding: 0.75rem 0.85rem;
+    border-radius: 8px;
+    color: var(--ink-soft);
+
+    &.active {
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      color: var(--accent);
+    }
+  }
+}
